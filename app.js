@@ -1,12 +1,13 @@
 import express from 'express';  // Modulo necesario para crear todo
 import path from 'path'; // Modulo para manejar rutas
+import 'dotenv/config.js'
+import './config/database.js'
 import cookieParser from 'cookie-parser'; // Libreria para manejar cookies
 import logger from 'morgan';  // Libreria para manejar logs
 import indexRouter from './routes/index.js';
 // Traen las rutas de los endpoints
 import usersRouter from './routes/users.js';
 import { __dirname } from './utils.js';
-import 'dotenv/config.js'
 
 let app = express(); // Define la aplicacion de back ejecutando el modulo de express
 
